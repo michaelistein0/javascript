@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+Q1. WHAT IS 5+5?<br>
+    <input type="radio" name="option1" id="correct1">10<br>
+    <input type="radio" name="option1" >20<br>
+    <input type="radio" name="option1" >30<br>
+    <input type="radio" name="option1" >40<br>
+    Q1. WHAT IS 35+5?<br>
+    <input type="radio" name="option2" >15<br>
+    <input type="radio" name="option2" >56<br>
+    <input type="radio" name="option2" >30<br>
+    <input type="radio" name="option2" id="correct2">40<br>
+    Q1. WHAT IS 25+5?<br>
+    <input type="radio" name="option3" >40<br>
+    <input type="radio" name="option3" >25<br>
+    <input type="radio" name="option3" id="correct3">30<br>
+    <input type="radio" name="option3" >45<br>
+    Q1. WHAT IS 5+15?<br>
+    <input type="radio" name="option4" id="correct4">20<br>
+    <input type="radio" name="option4" >24<br>
+    <input type="radio" name="option4" >37<br>
+    <input type="radio" name="option4" >43<br>
+
+    <input type="submit" name="submitQuiz" value="submitQuiz" onclick="result()">
+
+<script type="text/javascript">
+	function result(){
+		// body...
+		var score = 0;
+	if (document.getElementsById('correct1').checked
+		){
+			score++;
+	}
+	if (document.getElementsById('correct2').checked
+		){
+			score++;
+	}
+	if (document.getElementsById('correct3').checked
+		){
+			score++;
+	}
+	if (document.getElementsById('correct4').checked
+		){
+			score++;
+	}
+	alert('your Final Score is '+" "+ score)
+}
+</script>	
+</body>
+
+</html>
