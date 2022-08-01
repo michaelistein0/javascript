@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form events In Javascript</title>
+</head>
+<body>
+	<h1>form events In Javascript</h1>
+	<h2></h2>
+	<form id="firstForm" name="search">
+		<label for="fname">First Name</label>
+		<input type="text" id="fname" name="fname" placeholder="enter name">
+
+		<label for="password">password</label>
+		<input type="text" id="password" name="password">
+
+		<label for="password2">password confirm</label>
+		<input type="text" id="password2" name="password2">
+	</form>
+
+	<p style="color: red;"></p>
+	<script type="text/javascript">
+		let head = document.querySelector('h2');
+		let p = document.querySelector('p');
+		let password1 = document.getElementById('password');
+		let password2 = document.getElementById('password2');
+
+		/*
+		password1.addEventListener("input", (event)=>{
+			head.textContent = password1.value;
+		});
+		*/
+
+		password2.addEventListener('change', ()=>{
+			if (password1.value !== password2.value) {
+				// alert('Password fields do not match');
+				p.textContent = 'Password fields do not mathc';
+			}
+		});
+	</script>
+</body>
+</html>
